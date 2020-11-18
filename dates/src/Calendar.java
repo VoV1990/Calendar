@@ -1,4 +1,3 @@
-import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
@@ -30,9 +29,9 @@ public class Calendar {
         return matcher.matches();
     }
 
-    static class PublicHolidays {
-        private static Map<String, String> holidays_and_weekends = new TreeMap<>(String::compareTo);
-        static {
+    class PublicHolidays {
+        private Map<String, String> holidays_and_weekends = new TreeMap<>(String::compareTo);
+         {
             holidays_and_weekends.put("January 1", "New Year");
             holidays_and_weekends.put("January 7", "Christmas");
             holidays_and_weekends.put("March 8", "Women's day");
